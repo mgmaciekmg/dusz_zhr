@@ -1,0 +1,8 @@
+<% for page in @pages %>
+  <div class="product">
+    <h2><%= link_to page.name, page %></h2>
+    <div class="details">
+      <%= page.desc %>
+    </div>
+  </div>
+<% end %>
