@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'pages/index'
 
-  resources :pages
+  resources :pages do
+    resources :subpages
+  end
 
   root 'pages#index'
 

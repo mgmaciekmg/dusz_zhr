@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831142812) do
+ActiveRecord::Schema.define(version: 20150831150534) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -63,5 +63,7 @@ ActiveRecord::Schema.define(version: 20150831142812) do
     t.datetime "updated_at",             null: false
     t.boolean  "sub_active", limit: 1
   end
+
+  add_index "subpages", ["page_id"], name: "index_subpages_on_page_id", using: :btree
 
 end
