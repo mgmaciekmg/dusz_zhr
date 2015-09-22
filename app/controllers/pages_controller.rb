@@ -4,10 +4,11 @@ class PagesController < ApplicationController
 	# DRY!
 	def search_all
 		@pages = Page.all
-		@subpages = Subpage.all
 	end
 
 	def index
+		@articles = Article.all
+		@admins = Admin.all
 	end
 
 	def show

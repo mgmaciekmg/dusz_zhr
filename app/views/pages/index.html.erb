@@ -1,8 +1,7 @@
-<% for page in @pages %>
-  <div class="product">
-    <h2><%= link_to page.name, page %></h2>
-    <div class="details">
-      <%= page.desc %>
-    </div>
-  </div>
+<% @articles.each do |article| %>
+    <h2><%= link_to article.title, article_path(article) %></h2><br />
+    <p>
+      <%= article.content %><br />
+      <%= article.admin.email %>
+    </p>
 <% end %>
